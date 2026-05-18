@@ -1,0 +1,76 @@
+#    Filename : cdef.cmk
+# Description : Definition of all source- and header files of one package.
+#                To add this package to a project, include this file in the corresponding CMakeLists.txt file.
+#      Author : Jan Rademacher, I ID RD SW OA O, aka OSP
+#     Release : 
+#   Copyright : (c) 2016-2017, 2019-2020 Continental AG
+# ================================================================================================
+
+set(this_package      cdef)                          # package prefix
+set(this_package_file ${CMAKE_CURRENT_LIST_FILE})    # package cmk file
+set(this_package_dir  ${CMAKE_CURRENT_LIST_DIR}/..)  # package root directory
+# this_target_dir     (set in CMakeLists.txt)        # (sub-)project root directory
+# this_target_shortname (set in common.cmake)        # last part of current directory (e.g. 'legacy')
+# this_root_dir       (set in CMakeLists.txt)        # masterproject root directory
+
+
+################################################################################
+# package pre definitions
+include(${this_root_dir}/tool/cmake/adapt/package_pre.cmake)
+
+
+################################################################################
+# List here all used files of the package:
+
+# only static files
+# Entries in the list in the following line only have an effect if they match something
+# in the build environemnt. Some of them are for JGP, some/one of them is for JCP.
+# Keeping the full list make this file platform-independent.
+setVSProject(basesrv secgra jcp)
+staticFileList(
+    ${this_package_dir}/adapt/cdef.cmk
+    ${this_package_dir}/adapt/cdef1ce.h
+    ${this_package_dir}/core/cdef.h
+    ${this_package_dir}/core/cdef_chips.txt
+    ${this_package_dir}/core/cdef_common.h
+    ${this_package_dir}/core/cdef_deprecated.h
+    ${this_package_dir}/core/cdef1c1.c
+)
+
+
+# only generated files
+generatedFileList(
+#    ${this_package_dir}/adapt/gen/<file_gen>.c
+#    ${this_package_dir}/adapt/gen/<file_gen>.h
+)
+
+# The following two lines only have an effect on JCP systems,
+# but they are safely ignored on other platforms.
+# This allows to make a platform-independent file by keeping them.
+cds_set_compile_strategy(SRAM_1_SYSTEM SPEED ${${this_target}_${this_package}_FILES})
+cds_set_compile_strategy(SRAM_1_SYSTEM SPEED ${${this_target}_${this_package}_FILES_GEN})
+
+################################################################################
+# Add here files which are excluded from build:
+
+# excluded in all build configurations
+excludeFromBuild(
+#    ${this_package_dir}/adapt/<excluded_file>.c
+    ${this_package_dir}/adapt/cdef.cmk
+    ${this_package_dir}/core/cdef_chips.txt
+)
+
+# excluded in simulation build only
+excludeFromBuildSimulation(
+#	${this_package_dir}/adapt/<excluded_sim_file>.c
+)
+
+# excluded in target build only
+excludeFromBuildTarget(
+#	${this_package_dir}/adapt/<excluded_tgt_file>.c
+)
+
+
+################################################################################
+# package post definitions
+include(${this_root_dir}/tool/cmake/adapt/package_post.cmake)

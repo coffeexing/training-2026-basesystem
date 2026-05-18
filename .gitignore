@@ -1,0 +1,58 @@
+# Visual Studio IDE 缓存 / 配置
+.vs/
+*.suo
+*.user
+*.v12.suo
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.ipch
+ipch/
+
+# 编译输出
+Debug/
+Release/
+x64/
+x86/
+ARM/
+ARM64/
+
+# 中间文件
+*.obj
+*.ilk
+*.idb
+*.pdb
+*.iobj
+*.ipdb
+*.pch
+*.log
+
+# 构建跟踪日志（tlog）
+*.tlog/
+*.lastbuildstate
+*.recipe
+
+# 可执行 / 链接产物
+*.exe
+*.dll
+*.lib
+*.exp
+*.map
+
+# 其他 IDE 产物
+*.aps
+*.clw
+*.plg
+Thumbs.db
+Desktop.ini
+
+# CLion / IntelliJ IDEA
+.idea/
+
+# CMake 构建目录
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/

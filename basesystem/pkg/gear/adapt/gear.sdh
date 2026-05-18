@@ -1,0 +1,80 @@
+/***************************************************************************
+*=====================      Copyright by Continental AG      ===============
+****************************************************************************
+* Title        : GEAR.SDH
+*
+* Description  : Gear Postion Judge Module.
+*
+* Environment  : V850E2M
+*
+* Responsible  : Fang Tao ID RD SW WHU
+*
+* Template name: none
+*
+* CASE-Tool    : none
+*
+* Revision List: (Will be filled by PVCS)
+* Archive: $Log: gear.sdh  $
+* Archive: Revision 1.1 2018/05/16 04:45:12CEST uidk9527 
+* Archive: Initial revision
+* Archive: Member added to project /id/gw_IC01/sw/pkg/gear/~gw_IC01.sw.pkg.gear_RH850_P3011_Var1/adapt/project.pj
+
+*
+****************************************************************************/
+//-------------------------------------------------
+// SINI Activities
+//-------------------------------------------------
+
+//-------------------------------------------------
+// CSHDL Definitions
+//------------------------------------------------- 
+//Init
+CRHDL DEFINE INTERNAL ACTIVITY  GEAR_vInit    IS OF TYPE INIT  AND DONE AT INIT  OF SRES_CANPassive SEQUENCE 10 RUNTIME IS 2000;
+
+//Deinit
+CRHDL DEFINE INTERNAL ACTIVITY  GEAR_vDeInit  IS OF TYPE DEINIT  AND DONE AT DEINIT  OF SRES_CANPassive  SEQUENCE 10 RUNTIME IS 2000;
+
+//-------------------------------------------------
+// Request Definitions
+//-------------------------------------------------
+
+//-------------------------------------------------
+// Timer Definitions
+//-------------------------------------------------
+
+//-------------------------------------------------
+// Event Definitions
+//-------------------------------------------------
+
+//-------------------------------------------------
+// Event Usages
+//-------------------------------------------------
+
+//-------------------------------------------------
+// Cyclic Activities
+//-------------------------------------------------
+CAM DEFINE ACTIVITY GEAR_vMain IS OF TYPE CYCLIC EXECUTED IN Every25ms
+        NEEDS RESOURCE STATES:{
+          INIT OF SRES_CANPassive;
+        }
+        SEQUENCE  3 RUNTIME IS 1;
+      
+//-------------------------------------------------
+// DPOOL
+//-------------------------------------------------
+DPOOL DEFINE STRUCT GEAR_tstGearData
+   ELEMENT  uint8  GEAR_u8GearPosi;
+   
+DPOOL DEFINE DATA GEAR_stGearData TYPE GEAR_tstGearData DEFAULTVALUE "{0}"; 
+
+DPOOL USE DATA GEAR_stGearData;
+
+DPOOL DEFINE STRUCT GEAR_tstShiftSymbolData
+   ELEMENT  uint8  GEAR_u8ShiftSymbolPosi;
+
+DPOOL DEFINE DATA GEAR_stShiftSymbolData TYPE GEAR_tstShiftSymbolData DEFAULTVALUE "{0}"; 
+
+DPOOL USE DATA GEAR_stShiftSymbolData;
+/***********************************************************************
+ *                 END OF FILE
+ ***********************************************************************/

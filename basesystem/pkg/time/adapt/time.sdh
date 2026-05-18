@@ -1,0 +1,8 @@
+
+
+DPOOL DEFINE STRUCT DIF_tstClkDpoolData
+    ELEMENT uint16  DIF_u16Hour,       //  clock Hour
+    ELEMENT uint16  DIF_u16Min,        //  clock Minutes
+    ELEMENT uint16  DIF_u16Mode;       //  0---> 24 hour format; 1--->12 hour format
+DPOOL DEFINE WAKEUP_RAM DATA DIF_stClkDpoolData TYPE DIF_tstClkDpoolData DEFAULTVALUE "{0,0,0}";
+DPOOL USE DATA DIF_stClkDpoolData;

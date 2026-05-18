@@ -1,0 +1,10 @@
+//-------------------------------------------------
+// Slope dpool value define, only include in P3011
+//-------------------------------------------------
+DPOOL DEFINE STRUCT DIF_tstSlopeDpoolData
+   ELEMENT uint8  DIF_u8SlopeDirectionValue,   //0: Horizontal vehicle icon; 1:Uphill vehicle icon; 2: Downhill vehicle icon
+   ELEMENT uint8  DIF_u8SlopeAngleValue,	   // 0--90
+   ELEMENT uint8  DIF_u8SlopeUnit;		   // 0:None; 1: degree, other value: reserved
+DPOOL DEFINE WAKEUP_RAM DATA DIF_stSlopeDpoolData TYPE DIF_tstSlopeDpoolData DEFAULTVALUE "{0, 0, 1}";
+DPOOL USE DATA DIF_stSlopeDpoolData;
+

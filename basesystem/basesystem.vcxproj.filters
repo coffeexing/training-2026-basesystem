@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\delay">
+      <UniqueIdentifier>{ec170b02-85f4-4a19-a414-6b63373c4ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gear">
+      <UniqueIdentifier>{49028a74-b063-439f-ae77-d17946d7c3d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\slope">
+      <UniqueIdentifier>{45f32c1e-03dd-4943-8243-77757366bc10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{282b647d-4c67-4f45-9421-990f76e1a1a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\time">
+      <UniqueIdentifier>{b08fd5e0-8250-4dd8-af8a-b9c3529eaacd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wrn">
+      <UniqueIdentifier>{c99d9b7c-609d-43dc-b17e-23d1f573f637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gear\adapt">
+      <UniqueIdentifier>{62b426f8-30df-4046-953b-41a209daf7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gear\core">
+      <UniqueIdentifier>{c1505798-27f9-4621-a661-3ae52846a00b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wrn\adapt">
+      <UniqueIdentifier>{2cc3d882-144b-4443-8afb-e58fe039fe37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wrn\core">
+      <UniqueIdentifier>{9d02af19-2be0-4c6b-aa1d-139e75afe227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\time\adapt">
+      <UniqueIdentifier>{c2bbdcab-5f3d-409a-b42a-8fd805416658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\time\core">
+      <UniqueIdentifier>{72e89068-5e00-4c66-a68e-461a97c51b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\slope\adapt">
+      <UniqueIdentifier>{3ea42f4b-cbb4-449d-9356-45c6fafb2363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\slope\core">
+      <UniqueIdentifier>{fab34121-8f4b-422e-90ba-0ee5510950a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dif">
+      <UniqueIdentifier>{b72f84ac-bb35-41ae-b766-6fb215592c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dif\adapt">
+      <UniqueIdentifier>{be1dc64e-ed2c-4890-b41f-849d1318f9ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dif\core">
+      <UniqueIdentifier>{084da756-1b90-4c9c-8218-1553618eb61f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\delay\delay.h">
+      <Filter>Source Files\delay</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\gear\adapt\gear1ci.h">
+      <Filter>Source Files\gear\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\gear\adapt\gear1ct.h">
+      <Filter>Source Files\gear\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\gear\core\gear1c1.h">
+      <Filter>Source Files\gear\core</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\wrn\adapt\wrn1ci.h">
+      <Filter>Source Files\wrn\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\wrn\adapt\wrn1ct.h">
+      <Filter>Source Files\wrn\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\wrn\core\wrn1c1.h">
+      <Filter>Source Files\wrn\core</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\time\adapt\time1ci.h">
+      <Filter>Source Files\time\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\time\adapt\time1ct.h">
+      <Filter>Source Files\time\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\time\core\time1c1.h">
+      <Filter>Source Files\time\core</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\test\wrn_test.h">
+      <Filter>Source Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\slope\adapt\slope1ci.h">
+      <Filter>Source Files\slope\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\slope\adapt\slope1ct.h">
+      <Filter>Source Files\slope\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\slope\core\slope1c1.h">
+      <Filter>Source Files\slope\core</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\dif\adapt\dif1ci.h">
+      <Filter>Source Files\dif\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\dif\adapt\dif1ct.h">
+      <Filter>Source Files\dif\adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="pkg\dif\core\dif1c1.h">
+      <Filter>Source Files\dif\core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\delay\delay.c">
+      <Filter>Source Files\delay</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\gear\core\gear1c1.c">
+      <Filter>Source Files\gear\core</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\wrn\core\wrn1c1.c">
+      <Filter>Source Files\wrn\core</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\time\core\time1c1.c">
+      <Filter>Source Files\time\core</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\test\wrn_test.c">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\slope\core\slope1c1.c">
+      <Filter>Source Files\slope\core</Filter>
+    </ClCompile>
+    <ClCompile Include="pkg\dif\core\dif1c1.c">
+      <Filter>Source Files\dif\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pkg\gear\adapt\gear.sdh">
+      <Filter>Source Files\gear\adapt</Filter>
+    </None>
+    <None Include="pkg\wrn\adapt\wrn.sdh">
+      <Filter>Source Files\wrn\adapt</Filter>
+    </None>
+    <None Include="pkg\time\adapt\time.sdh">
+      <Filter>Source Files\time\adapt</Filter>
+    </None>
+    <None Include="pkg\slope\adapt\slope.sdh">
+      <Filter>Source Files\slope\adapt</Filter>
+    </None>
+    <None Include="pkg\dif\adapt\dif.sdh">
+      <Filter>Source Files\dif\adapt</Filter>
+    </None>
+  </ItemGroup>
+</Project>
